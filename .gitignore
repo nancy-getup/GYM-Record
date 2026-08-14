@@ -1,0 +1,36 @@
+# dependencies and package caches
+node_modules/
+.pnpm-store/
+
+# build and coverage output
+dist/
+coverage/
+
+# environment and local secrets
+.env
+.env.*
+!.env.example
+
+# logs and runtime output
+*.log
+.vite-dev.*.log
+
+# local caches and temporary test files
+.vite/
+.cache/
+tmp/
+temp/
+todo.md
+test-results/
+playwright-report/
+
+# editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# local data snapshots
+*.sqlite
+*.sqlite3
+*.db

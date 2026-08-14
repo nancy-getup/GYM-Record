@@ -1,0 +1,24 @@
+{
+  "name": "粉粉训练记录",
+  "short_name": "粉粉训练",
+  "description": "个人健身记录、趋势分析和渐进超负荷判断",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff7fb",
+  "theme_color": "#f78fb8",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
