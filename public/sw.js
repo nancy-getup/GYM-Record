@@ -1,5 +1,7 @@
 const CACHE_NAME = 'pink-gym-record-v1';
-const APP_SHELL = ['/', '/index.html', '/manifest.webmanifest', '/icons/icon-192.svg', '/icons/icon-512.svg'];
+const scopeUrl = new URL(self.registration.scope);
+const appUrl = (path) => new URL(path, scopeUrl).toString();
+const APP_SHELL = ['', 'index.html', 'manifest.webmanifest', 'icons/icon-192.svg', 'icons/icon-512.svg'].map(appUrl);
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)));
@@ -26,7 +28,7 @@ self.addEventListener('fetch', (event) => {
           caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
           return response;
         })
-        .catch(() => caches.match('/index.html'));
+        .catch(() => caches.match(appUrl('index.html')));
     }),
   );
 });
